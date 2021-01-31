@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block content%}
+     
+    
+<h1> Article </h1>
+<ul>
+{% for Article in object_list %}
+    <li> 
+    <a href = '{% url 'describtion' Article.pk %}'>
+    {{Article.Title}} <br/>
+    {{Article.Category}}<br/>
+    {{Article.Description}}<br/> 
+   <small> posted by: {{Article.Author}} <br/> </small>
+    <small> publish date {{Article.Publish_Date}} </small>
+    </li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}

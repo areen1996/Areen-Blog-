@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<h1>
+    {{ Article.Title}}
+    <small> here is the describtion of the clickable title  {{Article.Author}}</small> 
+</h1>
+<body>
+{{Article.Description}}
+</body>
+
+<br/>
+<a href = '{% url 'home' %}' class="btn btn-outline-secondary"> back </a>
+
+
+{% endblock %}
